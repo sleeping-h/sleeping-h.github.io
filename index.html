@@ -19,6 +19,36 @@ p {
 h1,h2,h3 {
     line-height:1.2
 }
+
+div {
+  box-sizing: border-box;
+}
+
+.ava {
+ width: 200px;
+}
+
+.neava {
+ width: 700px;
+	padding-right: 20px;
+}
+
+.column {
+  float: left;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 100%;
+  }
+}
 </style>
 </head>
 <body>
@@ -33,12 +63,17 @@ speginel website
 <hr>
 
 <h1>About</h1>
-<table><tr valign=top><td style="padding-right: 30px">
+<div  class="row">
+<div class="column neava">
 <p>Nadia (aka <em>speginel</em>) is a programmer and generative artist with a deep passion for fractal geometry, complex algebra and automation. Her creative coding journey started with the 2021 Genuary challenge, where she met the generative art community and shared her sketches for the first time.</p>
 <p>Inspired by the patterns in nature and architecture, Nadia uses tools like p5js and GLSL to recreate them with code, adding her own artistic vision. Her artworks often involve fractals, self-similarity and the magic of complex numbers.</p>
-</td><td>
+</div>
+<div class="column ava">
+<p>
 <img style="border-radius: 50%" width=200 src=https://avatars.githubusercontent.com/u/18052024?v=4>
-</td></tr></table>
+</p>
+</div>
+</div>
 <br><br><br><br>
 <hr>
 <center style="font-size:14px">
